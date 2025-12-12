@@ -4,9 +4,8 @@ const grades = new GradeBook([100, 50, 90, 20, 30]);
 const gradesAvg = grades.getAverage;
 
 // You can modify the following lines
-let grades1Average = gradesAvg(grades);
-let grades1WithBonus = gradesAvg(grades, [20]);
+console.log("Grade list");
 
-console.log('Grade list');
-console.log(grades1Average);     // should print out: 58
-console.log(grades1WithBonus);   // should print out: 78
+// Call with correct context
+console.log(gradesAvg.call(grades));        // 58
+console.log(gradesAvg.call(grades, 20));    // 78
