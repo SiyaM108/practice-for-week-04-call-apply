@@ -8,3 +8,10 @@ heyThereMessage = { message: 'Hey there,' };
 
 say(helloMessage, "John");
 say(heyThereMessage, "Michael");
+
+// MY CODE BELOW THIS LINE
+say.call(helloMessage, "John");
+say.call(heyThereMessage, "Michael");
+
+say.apply(helloMessage, ["John"]);
+say.apply(heyThereMessage, ["Michael"]);
